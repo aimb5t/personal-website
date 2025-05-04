@@ -201,7 +201,7 @@ section ul li {
 
 .hero-image {
     margin-bottom: 4rem;
-    width: 75%;  /* Change from 100% to 50% */
+    width: 25%;  /* Change from 100% to 50% */
     position: relative;
 }
 
@@ -209,11 +209,11 @@ section ul li {
     width: 100%;
     height: auto;
     display: block;
-    border-radius: 12px;
+    border-radius: 2px;
 }
 
 .hero-image::after {
-    content: "self portrait in window";
+    /* content: "self portrait in window"; */
     display: block;
     font-size: 0.85em;
     color: #666;
@@ -279,4 +279,22 @@ section ul li {
     .hero-image {
         width: 100%;  /* Full width on mobile */
     }
+}
+
+/* Make all links default blue, no underline except on hover */
+a, .nav-links a, #links ul li a {
+    color: blue !important;
+    text-decoration: none !important; /* No underline by default */
+}
+
+a:visited, .nav-links a:visited, #links ul li a:visited {
+    color: blue !important;
+    text-decoration: none !important; /* No underline for visited */
+}
+
+a:hover, .nav-links a:hover, #links ul li a:hover {
+    color: blue !important;
+    text-shadow: none !important; /* Remove custom hover effect */
+    background: none !important;
+    text-decoration: underline !important; /* Underline on hover */
 }
